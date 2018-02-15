@@ -35,7 +35,7 @@ class ViewController: UIViewController
     @IBAction func AC(_ sender: Any)
     {
         number = 0.0
-        string = String(number)
+        string = String( Int(number) )
         updateOutput()
     }
     
@@ -49,7 +49,13 @@ class ViewController: UIViewController
     }
     
     
-    @IBAction func multiply(_ sender: Any) {
+    @IBAction func multiply(_ sender: Any)
+    {
+        currentOperation = .multiplication
+        isItDoneComputing = false
+        
+        string += "\("*")"
+        updateOutput()
     }
     
     
@@ -57,6 +63,9 @@ class ViewController: UIViewController
     {
         currentOperation = .substraction
         isItDoneComputing = false
+        
+        string += "\("-")"
+        updateOutput()
     }
     
     
@@ -64,6 +73,9 @@ class ViewController: UIViewController
     {
         currentOperation = .addition
         isItDoneComputing = false
+        
+        string += "\("+")"
+        updateOutput()
     }
     
     
@@ -71,6 +83,9 @@ class ViewController: UIViewController
     {
         currentOperation = .division
         isItDoneComputing = false
+        
+        string += "\("/")"
+        updateOutput()
     }
     
     
@@ -78,11 +93,27 @@ class ViewController: UIViewController
     {
         isItDoneComputing = true
         number = compute(numberOne, numberTwo)
+        numberOne = compute(numberOne, numberTwo)
+        numberTwo = 0
+        //checking if the number is natural or not:
+        if ( number == number.rounded() )
+        {   //if it is then we display the number as an integer (no digits after 0):
+            string = String( Int(number) )
+            print("natural: ", Int(number))
+        }
+        else
+        {
+            //otherwise we display it with digits after 0:
+            string = String( number )
+        }
+        
         updateOutput()
     }
     
     
-    @IBAction func point(_ sender: Any) {
+    @IBAction func point(_ sender: Any)
+    {
+        
     }
     
     
@@ -90,63 +121,180 @@ class ViewController: UIViewController
     
     @IBAction func seven(_ sender: Any)
     {
-      
-    }
-    
-    
-    @IBAction func eight(_ sender: Any) {
-    }
-    
-    @IBAction func nine(_ sender: Any) {
-    }
-    
-    
-    @IBAction func four(_ sender: Any) {
-    }
-    
-    
-    @IBAction func five(_ sender: Any) {
-    }
-    
-    
-    @IBAction func six(_ sender: Any) {
-    }
-    
-    @IBAction func one(_ sender: Any)
-    {
-        number = 1
+        string += String(7)
         updateOutput()
         
         if isItDoneComputing
         {
-            numberOne = 1
+            numberOne = 7
         }
         else
         {
-            numberTwo = 1
+            numberTwo = 7
+        }
+      
+    }
+    
+    
+    @IBAction func eight(_ sender: Any)
+    {
+        string += String(8)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 8
+        }
+        else
+        {
+            numberTwo = 8
+        }
+    }
+    
+    @IBAction func nine(_ sender: Any)
+    {
+        string += String(9)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 9
+        }
+        else
+        {
+            numberTwo = 9
         }
     }
     
     
-    @IBAction func two(_ sender: Any) {
+    @IBAction func four(_ sender: Any)
+    {
+        string += String(4)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 4
+        }
+        else
+        {
+            numberTwo = 4
+        }
     }
     
-    @IBAction func three(_ sender: Any) {
+    
+    @IBAction func five(_ sender: Any)
+    {
+        string += String(5)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 5
+        }
+        else
+        {
+            numberTwo = 5
+        }
     }
     
-    @IBAction func zero(_ sender: Any) {
+    
+    @IBAction func six(_ sender: Any)
+    {
+        string += String(6)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 6
+        }
+        else
+        {
+            numberTwo = 6
+        }
+    }
+    
+    @IBAction func one(_ sender: Any)
+    {
+        string += String(1)
+        updateOutput()
+        if(number != 0)
+        {
+            if isItDoneComputing
+            {
+                numberOne = 1
+            }
+            else
+            {
+                numberTwo = 1
+            }
+        }
+    }
+    
+    
+    @IBAction func two(_ sender: Any)
+    {
+        string += String(2)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 2
+        }
+        else
+        {
+            numberTwo = 2
+        }
+    }
+    
+    @IBAction func three(_ sender: Any)
+    {
+        string += String(3)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 3
+        }
+        else
+        {
+            numberTwo = 3
+        }
+    }
+    
+    @IBAction func zero(_ sender: Any)
+    {
+        string += String(0)
+        updateOutput()
+        
+        if isItDoneComputing
+        {
+            numberOne = 0
+        }
+        else
+        {
+            numberTwo = 0
+        }
     }
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+       
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        //initializeCalculator()
+        updateOutput()
     }
     
     func updateOutput()
     {
-        output.text = String(number)
+        output.text = string
     }
 
     func compute(_ firstNumber: Double, _ secondNumber: Double) -> Double
@@ -157,6 +305,13 @@ class ViewController: UIViewController
         {
           case .addition:
             result = Double(firstNumber + secondNumber)
+          case .substraction:
+            result = Double(firstNumber - secondNumber)
+          case .multiplication:
+            result = Double(firstNumber * secondNumber)
+          case .division:
+            result = Double(firstNumber / secondNumber)
+            
         default:
             print("ERROR in compute(_ Double, _ DOuble)")
         }
@@ -165,6 +320,14 @@ class ViewController: UIViewController
         
         return result
     }
+    
+    func initializeCalculator()
+    {
+        number = 0
+        string = String( Int(number) )
+        updateOutput()
+    }
 
 }
+
 

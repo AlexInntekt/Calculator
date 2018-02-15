@@ -80,7 +80,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="rsX-iP-H47" secondAttribute="height" id="edC-7h-ezW"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <state key="normal" title="+/-">
                                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
