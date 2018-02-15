@@ -18,6 +18,7 @@ class ViewController: UIViewController
         case substraction
         case division
         case percentage
+        case signChange
         case nothing
     }
     
@@ -42,9 +43,15 @@ class ViewController: UIViewController
         updateOutput()
     }
     
-    @IBAction func plusMinus(_ sender: Any)
+
+
+    @IBAction func changeSign(_ sender: Any)
     {
+        currentOperation = .signChange
+        isItDoneComputing = false
         
+        self.equal((Any).self)
+        updateOutput()
     }
     
     @IBAction func percentage(_ sender: Any)
@@ -430,6 +437,8 @@ class ViewController: UIViewController
             result = Double(firstNumber / secondNumber)
         case .percentage:
             result = Double(firstNumber * secondNumber / 100)
+        case .signChange:
+            result = Double(-firstNumber)
             
         default:
             print("ERROR in compute(_ Double, _ DOuble)")
