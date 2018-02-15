@@ -17,6 +17,7 @@ class ViewController: UIViewController
         case multiplication
         case substraction
         case division
+        case percentage
         case nothing
     }
     
@@ -48,6 +49,11 @@ class ViewController: UIViewController
     
     @IBAction func percentage(_ sender: Any)
     {
+        currentOperation = .percentage
+        isItDoneComputing = false
+        
+        string += "\("%")"
+        updateOutput()
     }
     
     
@@ -422,6 +428,8 @@ class ViewController: UIViewController
             result = Double(firstNumber * secondNumber)
           case .division:
             result = Double(firstNumber / secondNumber)
+        case .percentage:
+            result = Double(firstNumber * secondNumber / 100)
             
         default:
             print("ERROR in compute(_ Double, _ DOuble)")
