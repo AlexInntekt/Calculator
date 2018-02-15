@@ -23,7 +23,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg" translatesAutoresizingMaskIntoConstraints="NO" id="ica-aW-dHb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcO-d6-owR" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-eZ-Yvn" userLabel="Display" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="19" y="32.5" width="337.5" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-Jf-tTR">
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.86301369863013699" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dOc-Jf-tTR" secondAttribute="trailing" id="Hzv-Lq-lIW"/>
+                                    <constraint firstAttribute="bottom" secondItem="dOc-Jf-tTR" secondAttribute="bottom" id="cgU-nk-dGF"/>
+                                    <constraint firstItem="dOc-Jf-tTR" firstAttribute="leading" secondItem="JBw-eZ-Yvn" secondAttribute="leading" id="gaH-fs-2lT"/>
+                                    <constraint firstItem="dOc-Jf-tTR" firstAttribute="top" secondItem="JBw-eZ-Yvn" secondAttribute="top" id="irB-Jo-jE0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcO-d6-owR" userLabel="CalculatorContainer" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
                                 <rect key="frame" x="19" y="195.5" width="337.5" height="433.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-1M-PDg">
@@ -47,6 +70,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="AC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A9n-hS-xzw"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-iP-H47" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="78" y="0.0" width="74.5" height="74"/>
@@ -63,6 +89,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="plusMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6Y-QY-P6t"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-RJ-fLA" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="156.5" y="0.0" width="74" height="74"/>
@@ -79,6 +108,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="percentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyU-8p-aoi"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aND-dY-5M3" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="234.5" y="0.0" width="74.5" height="74"/>
@@ -95,6 +127,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEP-eN-gAL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -122,6 +157,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="seven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oc8-Qr-o8v"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eW-ml-uFl" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="78" y="0.0" width="74.5" height="74"/>
@@ -138,6 +176,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="eight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RhG-m5-i3a"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJK-7e-lZg" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="156.5" y="0.0" width="74" height="74"/>
@@ -154,6 +195,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="nine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o33-9E-YZC"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-Rd-vAh" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="234.5" y="0.0" width="74.5" height="74"/>
@@ -170,6 +214,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mql-Gv-EQz"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -197,6 +244,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="four:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gt-y5-AAy"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY1-iO-Lu5" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="78" y="0.0" width="74.5" height="74"/>
@@ -213,6 +263,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="five:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPq-Bn-3K8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGi-c4-vtZ" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="156.5" y="0.0" width="74" height="74"/>
@@ -229,6 +282,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="six:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZr-qB-Qsj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6o-aq-m8i" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="234.5" y="0.0" width="74.5" height="74"/>
@@ -245,6 +301,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="15p-zW-OCh"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -272,6 +331,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="one:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hH2-gU-xb9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mly-5e-R9i" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="78" y="0.0" width="74.5" height="74"/>
@@ -288,6 +350,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="two:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tYX-Cc-td6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05g-BY-Bdo" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="156.5" y="0.0" width="74" height="74"/>
@@ -304,6 +369,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="three:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acb-lq-5lC"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gc-pN-elZ" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="234.5" y="0.0" width="74.5" height="74"/>
@@ -320,6 +388,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="At7-3t-Xet"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -344,6 +415,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="zero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A02-it-PbL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsT-Yq-s8f" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="155" y="0.5" width="75" height="73.5"/>
@@ -357,6 +431,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="point:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WzQ-rF-iB6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMq-m4-PJB" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="235" y="0.5" width="74" height="73.5"/>
@@ -373,6 +450,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="equal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nr-ol-efE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -408,15 +488,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-eZ-Yvn" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
-                                <rect key="frame" x="19" y="18.5" width="337.5" height="100"/>
-                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="0.86301369863013699" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -428,13 +499,16 @@
                             <constraint firstItem="YcO-d6-owR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="LrE-9c-YYB"/>
                             <constraint firstItem="JBw-eZ-Yvn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TkA-e8-flF"/>
                             <constraint firstItem="JBw-eZ-Yvn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="f1R-1w-E6j"/>
-                            <constraint firstItem="JBw-eZ-Yvn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.2" id="gKN-0k-Ney"/>
+                            <constraint firstItem="JBw-eZ-Yvn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.24" id="gKN-0k-Ney"/>
                             <constraint firstItem="YcO-d6-owR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kwC-Ob-Vad"/>
                             <constraint firstItem="JBw-eZ-Yvn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="v6M-f1-zVB"/>
                             <constraint firstItem="ica-aW-dHb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yvn-9t-gpH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="output" destination="dOc-Jf-tTR" id="thh-U9-HKg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
