@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg" translatesAutoresizingMaskIntoConstraints="NO" id="ica-aW-dHb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcO-d6-owR" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="166.5" width="300" height="467"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.3904109589041096" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ica-aW-dHb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="08L-Hk-h5e"/>
+                            <constraint firstAttribute="bottom" secondItem="ica-aW-dHb" secondAttribute="bottom" id="9Mn-IM-eRH"/>
+                            <constraint firstAttribute="trailing" secondItem="ica-aW-dHb" secondAttribute="trailing" id="Jng-I9-S4E"/>
+                            <constraint firstItem="YcO-d6-owR" firstAttribute="width" secondItem="ica-aW-dHb" secondAttribute="width" multiplier="0.8" id="TRo-4k-uNe"/>
+                            <constraint firstItem="YcO-d6-owR" firstAttribute="centerX" secondItem="ica-aW-dHb" secondAttribute="centerX" id="qgS-b1-UCB"/>
+                            <constraint firstItem="ica-aW-dHb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yvn-9t-gpH"/>
+                            <constraint firstItem="YcO-d6-owR" firstAttribute="centerY" secondItem="ica-aW-dHb" secondAttribute="centerY" multiplier="1.2" id="zil-My-OmT"/>
+                            <constraint firstItem="YcO-d6-owR" firstAttribute="height" secondItem="ica-aW-dHb" secondAttribute="height" multiplier="0.7" id="zkS-YN-zYf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bkg" width="1920" height="1080"/>
+    </resources>
+</document>
