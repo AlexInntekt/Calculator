@@ -16,6 +16,7 @@
 		B2FCD9B12036073D001651D3 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCD9B02036073D001651D3 /* CalculatorTests.swift */; };
 		B2FCD9BC2036073D001651D3 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCD9BB2036073D001651D3 /* CalculatorUITests.swift */; };
 		B2FCD9CA20360807001651D3 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCD9C920360807001651D3 /* UIViewX.swift */; };
+		B2FCD9CC20360A55001651D3 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCD9CB20360A55001651D3 /* UIButtonX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B2FCD9BB2036073D001651D3 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		B2FCD9BD2036073D001651D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2FCD9C920360807001651D3 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		B2FCD9CB20360A55001651D3 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				B2FCD9BA2036073D001651D3 /* CalculatorUITests */,
 				B2FCD9962036073D001651D3 /* Products */,
 				B2FCD9C920360807001651D3 /* UIViewX.swift */,
+				B2FCD9CB20360A55001651D3 /* UIButtonX.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2FCD99B2036073D001651D3 /* ViewController.swift in Sources */,
+				B2FCD9CC20360A55001651D3 /* UIButtonX.swift in Sources */,
 				B2FCD9CA20360807001651D3 /* UIViewX.swift in Sources */,
 				B2FCD9992036073D001651D3 /* AppDelegate.swift in Sources */,
 				B2FCD9A12036073D001651D3 /* Calculator.xcdatamodeld in Sources */,
