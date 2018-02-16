@@ -89,21 +89,7 @@ class ViewController: UIViewController
         self.equal((Any).self)
         updateOutput()
     }
-    
-    @IBAction func percentage(_ sender: Any)
-    {
-        if(isItDoneComputing)
-        {
-            self.equal((Any).self)
-        }
-        
-        currentOperation = .percentage
-        isItDoneComputing = false
-        
-        string += "\("%")"
-        updateOutput()
-    }
-    
+
     @IBAction func operationButtons(_ sender: UIButton)
     {
         
@@ -135,6 +121,11 @@ class ViewController: UIViewController
         {
             currentOperation = .division
             string += "\("/")"
+        }
+        if(sender.tag==4)
+        {
+            currentOperation = .percentage
+            string += "\("%")"
         }
         
         isItDoneComputing = false
