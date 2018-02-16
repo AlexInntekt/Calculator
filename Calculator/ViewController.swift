@@ -104,8 +104,10 @@ class ViewController: UIViewController
     }
     
     
+    @IBOutlet var equal: UIButtonX!
     @IBAction func equal(_ sender: Any)
     {
+        
         isItDoneComputing = true
         number = compute(numberOne, numberTwo)
         numberOne = compute(numberOne, numberTwo)

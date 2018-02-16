@@ -138,6 +138,7 @@
                                                     <constraint firstItem="Mj6-RJ-fLA" firstAttribute="width" secondItem="Okg-zX-nIJ" secondAttribute="width" id="Wfb-O2-3Km"/>
                                                     <constraint firstItem="aND-dY-5M3" firstAttribute="width" secondItem="Okg-zX-nIJ" secondAttribute="width" id="bal-QL-o7R"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1a3-qz-qRO">
                                                 <rect key="frame" x="0.0" y="80" width="309" height="74"/>
@@ -225,6 +226,7 @@
                                                     <constraint firstItem="gjS-Rd-vAh" firstAttribute="width" secondItem="eDg-WI-8II" secondAttribute="width" id="sjE-Ah-xrw"/>
                                                     <constraint firstItem="2eW-ml-uFl" firstAttribute="width" secondItem="eDg-WI-8II" secondAttribute="width" id="svO-kb-eUQ"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wkf-pG-fGd">
                                                 <rect key="frame" x="0.0" y="160" width="309" height="74"/>
@@ -312,6 +314,7 @@
                                                     <constraint firstItem="fY1-iO-Lu5" firstAttribute="width" secondItem="g5M-Nn-ASX" secondAttribute="width" id="UBF-Ir-kWJ"/>
                                                     <constraint firstItem="K6o-aq-m8i" firstAttribute="width" secondItem="g5M-Nn-ASX" secondAttribute="width" id="xJo-z1-iOg"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GKl-gx-U8G">
                                                 <rect key="frame" x="0.0" y="240" width="309" height="74"/>
@@ -399,6 +402,7 @@
                                                     <constraint firstItem="mly-5e-R9i" firstAttribute="width" secondItem="Gva-Mb-gS3" secondAttribute="width" id="g5z-kg-Vxn"/>
                                                     <constraint firstItem="05g-BY-Bdo" firstAttribute="width" secondItem="Gva-Mb-gS3" secondAttribute="width" id="huZ-4E-knz"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-Gd-UIB">
                                                 <rect key="frame" x="0.0" y="320" width="309" height="74"/>
@@ -459,6 +463,7 @@
                                                     <constraint firstItem="CsT-Yq-s8f" firstAttribute="height" secondItem="fjl-yV-F9q" secondAttribute="height" id="gLs-T7-K6i"/>
                                                     <constraint firstItem="CsT-Yq-s8f" firstAttribute="width" secondItem="fjl-yV-F9q" secondAttribute="width" multiplier="0.5" id="hgf-YK-6le"/>
                                                 </constraints>
+                                                <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -468,6 +473,7 @@
                                             <constraint firstItem="YMq-m4-PJB" firstAttribute="width" secondItem="Gva-Mb-gS3" secondAttribute="width" id="ohd-p5-nBj"/>
                                             <constraint firstItem="Gva-Mb-gS3" firstAttribute="width" secondItem="g5M-Nn-ASX" secondAttribute="height" multiplier="1:1" id="yDe-64-uxF"/>
                                         </constraints>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.3904109589041096" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -489,7 +495,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ica-aW-dHb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="08L-Hk-h5e"/>
                             <constraint firstItem="YcO-d6-owR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="3Mc-E6-pEz"/>
@@ -507,6 +513,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="equal" destination="YMq-m4-PJB" id="kcv-41-TmX"/>
                         <outlet property="output" destination="dOc-Jf-tTR" id="thh-U9-HKg"/>
                     </connections>
                 </viewController>
