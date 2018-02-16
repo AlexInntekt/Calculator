@@ -28,7 +28,7 @@ class ViewController: UIViewController
     var numberOne = 0.0
     var numberTwo = 0.0
     
-    var currentOperation: operation = .nothing
+    var currentOperation: operation = .addition
     var isItDoneComputing = true
     
     @IBOutlet var output: UILabel!
@@ -54,12 +54,13 @@ class ViewController: UIViewController
         {
             numberTwo = Double( String( Int(numberTwo) ) + String(sender.tag) )!
             print("numberTwo: ", numberTwo)
-            isItDoneComputing = true
         }
-        
         updateOutput()
-        
     }
+    
+    
+   
+    
     
     @IBAction func point(_ sender: Any)
     {
@@ -103,60 +104,70 @@ class ViewController: UIViewController
     }
     
     
-    @IBAction func multiply(_ sender: Any)
+    @IBAction func plus(_ sender: Any)
     {
-        if(isItDoneComputing)
+
+        if !isItDoneComputing
         {
             self.equal((Any).self)
         }
 
-        currentOperation = .multiplication
+        numberOne = number
+        
+        currentOperation = .addition
+        
         isItDoneComputing = false
         
-        string += "\("*")"
+        
+        string += "\("+")"
         updateOutput()
     }
     
-    
     @IBAction func minus(_ sender: Any)
     {
-        if(isItDoneComputing)
+        
+        if !isItDoneComputing
         {
             self.equal((Any).self)
         }
+
+        numberOne = number
         
         currentOperation = .substraction
+        
         isItDoneComputing = false
+        
         
         string += "\("-")"
         updateOutput()
     }
     
     
-    @IBAction func plus(_ sender: Any)
+    @IBAction func multiply(_ sender: Any)
     {
-        if(isItDoneComputing)
-        {
-            self.equal((Any).self)
-        }
+
+        self.equal((Any).self)
+        numberOne = number
         
-        currentOperation = .addition
+        currentOperation = .multiplication
+        
         isItDoneComputing = false
         
-        string += "\("+")"
+        string += "\("*")"
         updateOutput()
     }
-    
+ 
     
     @IBAction func divide(_ sender: Any)
     {
-        if(isItDoneComputing)
-        {
-            self.equal((Any).self)
-        }
-        
+
+        self.equal((Any).self)
+        numberOne = number
+
         currentOperation = .division
+        
         isItDoneComputing = false
+        
         
         string += "\("/")"
         updateOutput()
@@ -171,11 +182,13 @@ class ViewController: UIViewController
         number = compute(numberOne, numberTwo)
         numberOne = compute(numberOne, numberTwo)
         numberTwo = 0
+        print("numberOne: ", numberOne)
+        print("numberTwo: ", numberTwo)
+        
         //checking if the number is natural or not:
         if ( number == number.rounded() )
         {   //if it is then we display the number as an integer (no digits after 0):
             string = String( Int(number) )
-            print("natural: ", Int(number))
         }
         else
         {
@@ -183,6 +196,7 @@ class ViewController: UIViewController
             string = String( number )
         }
         
+        isItDoneComputing = true
         updateOutput()
     }
     
@@ -204,6 +218,7 @@ class ViewController: UIViewController
     
     override func viewDidAppear(_ animated: Bool)
     {
+        
         initializeCalculator()
         //updateOutput()
     }
@@ -245,6 +260,7 @@ class ViewController: UIViewController
     {
         number = 0
         string = String( Int(number) )
+        self.AC((Any).self)
         updateOutput()
     }
 
