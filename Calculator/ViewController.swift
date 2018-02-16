@@ -72,6 +72,7 @@ class ViewController: UIViewController
     @IBAction func AC(_ sender: Any)
     {
         numberOne = 0
+        numberTwo = 0
         isItDoneComputing = true
         number = 0.0
         string = String( Int(number) )
@@ -106,10 +107,14 @@ class ViewController: UIViewController
     @IBAction func operationButtons(_ sender: UIButton)
     {
         
-        self.equal((Any).self)
+        if(!isItDoneComputing)
+        {
+            self.equal((Any).self)
+        }
         
         
-        numberOne = number
+        
+        //numberOne = number
         
         if(sender.tag==0)
         {
@@ -147,10 +152,8 @@ class ViewController: UIViewController
         isItDoneComputing = true
         number = compute(numberOne, numberTwo)
         numberOne = compute(numberOne, numberTwo)
-        numberTwo = 0
-        print("numberOne: ", numberOne)
-        print("numberTwo: ", numberTwo)
-        print("result: ", number)
+        //numberTwo = 0
+        
         //checking if the number is natural or not:
         if ( number == number.rounded() )
         {   //if it is then we display the number as an integer (no digits after 0):
@@ -162,8 +165,10 @@ class ViewController: UIViewController
             string = String( number )
         }
         
+        numberTwo = 0
         isItDoneComputing = true
         updateOutput()
+        print("\n-----------ENDING OPERATION--------------\n")
     }
     
     
@@ -178,6 +183,10 @@ class ViewController: UIViewController
         var result: Double = 0.0
         
         print("Operation: ", currentOperation)
+        print("numberOne: ", numberOne)
+        print("numberTwo: ", numberTwo)
+        print("result: ", number)
+        
         
         switch currentOperation
         {
