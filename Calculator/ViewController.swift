@@ -103,75 +103,41 @@ class ViewController: UIViewController
         updateOutput()
     }
     
-    
-    @IBAction func plus(_ sender: Any)
-    {
-
-        if !isItDoneComputing
-        {
-            self.equal((Any).self)
-        }
-
-        numberOne = number
-        
-        currentOperation = .addition
-        
-        isItDoneComputing = false
-        
-        
-        string += "\("+")"
-        updateOutput()
-    }
-    
-    @IBAction func minus(_ sender: Any)
+    @IBAction func operationButtons(_ sender: UIButton)
     {
         
-        if !isItDoneComputing
-        {
-            self.equal((Any).self)
-        }
-
-        numberOne = number
-        
-        currentOperation = .substraction
-        
-        isItDoneComputing = false
-        
-        
-        string += "\("-")"
-        updateOutput()
-    }
-    
-    
-    @IBAction func multiply(_ sender: Any)
-    {
-
         self.equal((Any).self)
+        
+        
         numberOne = number
         
-        currentOperation = .multiplication
+        if(sender.tag==0)
+        {
+            currentOperation = .addition
+            string += "\("+")"
+        }
+        if(sender.tag==1)
+        {
+            currentOperation = .substraction
+            string += "\("-")"
+        }
+        if(sender.tag==2)
+        {
+            currentOperation = .multiplication
+            string += "\("*")"
+        }
+        if(sender.tag==3)
+        {
+            currentOperation = .division
+            string += "\("/")"
+        }
         
         isItDoneComputing = false
-        
-        string += "\("*")"
+
         updateOutput()
     }
- 
     
-    @IBAction func divide(_ sender: Any)
-    {
-
-        self.equal((Any).self)
-        numberOne = number
-
-        currentOperation = .division
-        
-        isItDoneComputing = false
-        
-        
-        string += "\("/")"
-        updateOutput()
-    }
+    
     
     
     @IBOutlet var equal: UIButtonX!
@@ -184,7 +150,7 @@ class ViewController: UIViewController
         numberTwo = 0
         print("numberOne: ", numberOne)
         print("numberTwo: ", numberTwo)
-        
+        print("result: ", number)
         //checking if the number is natural or not:
         if ( number == number.rounded() )
         {   //if it is then we display the number as an integer (no digits after 0):
@@ -201,46 +167,27 @@ class ViewController: UIViewController
     }
     
     
-
-    
-    
-    
- 
-    
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-       
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool)
-    {
-        
-        initializeCalculator()
-        //updateOutput()
-    }
-    
     func updateOutput()
     {
         output.text = string
     }
-
+    
+    
     func compute(_ firstNumber: Double, _ secondNumber: Double) -> Double
     {
         var result: Double = 0.0
         
+        print("Operation: ", currentOperation)
+        
         switch currentOperation
         {
-          case .addition:
+        case .addition:
             result = Double(firstNumber + secondNumber)
-          case .substraction:
+        case .substraction:
             result = Double(firstNumber - secondNumber)
-          case .multiplication:
+        case .multiplication:
             result = Double(firstNumber * secondNumber)
-          case .division:
+        case .division:
             result = Double(firstNumber / secondNumber)
         case .percentage:
             result = Double(firstNumber * secondNumber / 100)
@@ -264,6 +211,27 @@ class ViewController: UIViewController
         updateOutput()
     }
 
+    
+    
+ 
+    
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+       
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        
+        initializeCalculator()
+        //updateOutput()
+    }
+    
+    
 }
 
 

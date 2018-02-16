@@ -109,7 +109,7 @@
                                                             <action selector="percentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyU-8p-aoi"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aND-dY-5M3" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aND-dY-5M3" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="234.5" y="0.0" width="74.5" height="74"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -125,7 +125,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEP-eN-gAL"/>
+                                                            <action selector="operationButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="usf-gE-hKL"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -197,7 +197,7 @@
                                                             <action selector="keys:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZr-Jl-eWw"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-Rd-vAh" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-Rd-vAh" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="234.5" y="0.0" width="74.5" height="74"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -213,7 +213,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mql-Gv-EQz"/>
+                                                            <action selector="operationButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCx-mK-Ozl"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -285,7 +285,7 @@
                                                             <action selector="keys:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewv-G1-fTX"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6o-aq-m8i" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6o-aq-m8i" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="234.5" y="0.0" width="74.5" height="74"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -301,7 +301,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="15p-zW-OCh"/>
+                                                            <action selector="operationButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x46-Aw-76Y"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -389,7 +389,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="At7-3t-Xet"/>
+                                                            <action selector="operationButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cS-YQ-mCJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
