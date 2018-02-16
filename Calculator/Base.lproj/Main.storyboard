@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-eZ-Yvn" userLabel="Display" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
-                                <rect key="frame" x="19" y="32.5" width="337.5" height="100"/>
+                                <rect key="frame" x="19" y="70" width="337.5" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-Jf-tTR">
                                         <rect key="frame" x="0.0" y="0.0" width="337.5" height="100"/>
@@ -59,7 +59,7 @@
                                                             <constraint firstAttribute="width" secondItem="Okg-zX-nIJ" secondAttribute="height" id="w5J-tJ-m10"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                        <state key="normal" title="AC">
+                                                        <state key="normal" title="C">
                                                             <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
@@ -491,15 +491,25 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1t-FO-Bnr" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hG2-wn-eXB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YcO-d6-owR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="3Mc-E6-pEz"/>
                             <constraint firstItem="YcO-d6-owR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.65" id="3P9-p6-L8d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t1t-FO-Bnr" secondAttribute="trailing" id="Fh2-M9-JbB"/>
+                            <constraint firstItem="t1t-FO-Bnr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IJY-1f-V5C"/>
                             <constraint firstItem="YcO-d6-owR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="LrE-9c-YYB"/>
                             <constraint firstItem="JBw-eZ-Yvn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TkA-e8-flF"/>
                             <constraint firstItem="JBw-eZ-Yvn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="f1R-1w-E6j"/>
-                            <constraint firstItem="JBw-eZ-Yvn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.24" id="gKN-0k-Ney"/>
+                            <constraint firstItem="t1t-FO-Bnr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fNe-MT-2af"/>
+                            <constraint firstItem="JBw-eZ-Yvn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.35" id="gKN-0k-Ney"/>
                             <constraint firstItem="YcO-d6-owR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kwC-Ob-Vad"/>
                             <constraint firstItem="JBw-eZ-Yvn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="v6M-f1-zVB"/>
                         </constraints>
