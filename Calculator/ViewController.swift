@@ -54,6 +54,7 @@ class ViewController: UIViewController
         {
             numberTwo = Double( String( Int(numberTwo) ) + String(sender.tag) )!
             print("numberTwo: ", numberTwo)
+            isItDoneComputing = true
         }
         
         updateOutput()
@@ -89,6 +90,11 @@ class ViewController: UIViewController
     
     @IBAction func percentage(_ sender: Any)
     {
+        if(isItDoneComputing)
+        {
+            self.equal((Any).self)
+        }
+        
         currentOperation = .percentage
         isItDoneComputing = false
         
@@ -99,6 +105,11 @@ class ViewController: UIViewController
     
     @IBAction func multiply(_ sender: Any)
     {
+        if(isItDoneComputing)
+        {
+            self.equal((Any).self)
+        }
+
         currentOperation = .multiplication
         isItDoneComputing = false
         
@@ -109,6 +120,11 @@ class ViewController: UIViewController
     
     @IBAction func minus(_ sender: Any)
     {
+        if(isItDoneComputing)
+        {
+            self.equal((Any).self)
+        }
+        
         currentOperation = .substraction
         isItDoneComputing = false
         
@@ -119,6 +135,11 @@ class ViewController: UIViewController
     
     @IBAction func plus(_ sender: Any)
     {
+        if(isItDoneComputing)
+        {
+            self.equal((Any).self)
+        }
+        
         currentOperation = .addition
         isItDoneComputing = false
         
@@ -129,6 +150,11 @@ class ViewController: UIViewController
     
     @IBAction func divide(_ sender: Any)
     {
+        if(isItDoneComputing)
+        {
+            self.equal((Any).self)
+        }
+        
         currentOperation = .division
         isItDoneComputing = false
         
@@ -178,8 +204,8 @@ class ViewController: UIViewController
     
     override func viewDidAppear(_ animated: Bool)
     {
-        //initializeCalculator()
-        updateOutput()
+        initializeCalculator()
+        //updateOutput()
     }
     
     func updateOutput()
