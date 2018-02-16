@@ -34,6 +34,34 @@ class ViewController: UIViewController
     @IBOutlet var output: UILabel!
     
     
+     @IBAction func keys(_ sender: UIButton)
+    {
+        if( string == "0")
+        {
+            string = String(sender.tag)
+        }
+        else
+        {
+            string += String(sender.tag)
+        }
+        
+        if isItDoneComputing
+        {
+            numberOne = Double( String( Int(numberOne) ) + String(sender.tag) )!
+            print("numberOne: ", numberOne)
+        }
+        else
+        {
+            numberTwo = Double( String( Int(numberTwo) ) + String(sender.tag) )!
+            print("numberTwo: ", numberTwo)
+        }
+        
+        updateOutput()
+        
+
+    }
+    
+    
     @IBAction func AC(_ sender: Any)
     {
         numberOne = 0
@@ -135,273 +163,7 @@ class ViewController: UIViewController
     
     
     
-    
-    @IBAction func seven(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(7)
-        }
-        else
-        {
-            string += String(7)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(7) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(7) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-      
-    }
-    
-    
-    @IBAction func eight(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(8)
-        }
-        else
-        {
-            string += String(8)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(8) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(8) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
-    
-    @IBAction func nine(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(9)
-        }
-        else
-        {
-            string += String(9)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(9) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(9) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
-    
-    
-    @IBAction func four(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(4)
-        }
-        else
-        {
-            string += String(4)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(4) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(4) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
-    
-    
-    @IBAction func five(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(5)
-        }
-        else
-        {
-            string += String(5)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(5) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(5) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
-    
-    
-    @IBAction func six(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(6)
-        }
-        else
-        {
-            string += String(6)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(6) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(6) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
-    
-    @IBAction func one(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(1)
-        }
-        else
-        {
-            string += String(1)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(1) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(1) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-
-    }
-    
-    
-    @IBAction func two(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(2)
-        }
-        else
-        {
-            string += String(2)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(2) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(2) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
-    
-    @IBAction func three(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(3)
-        }
-        else
-        {
-            string += String(3)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(3) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(3) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
-    
-    @IBAction func zero(_ sender: Any)
-    {
-        if( string == "0")
-        {
-            string = String(0)
-        }
-        else
-        {
-            string += String(0)
-        }
-        
-        if isItDoneComputing
-        {
-            numberOne = Double( String( Int(numberOne) ) + String(0) )!
-            print("numberOne: ", numberOne)
-        }
-        else
-        {
-            numberTwo = Double( String( Int(numberTwo) ) + String(0) )!
-            print("numberTwo: ", numberTwo)
-        }
-        
-        updateOutput()
-        
-    }
+ 
     
     
     override func viewDidLoad()
