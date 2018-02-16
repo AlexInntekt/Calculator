@@ -58,7 +58,12 @@ class ViewController: UIViewController
         
         updateOutput()
         
-
+    }
+    
+    @IBAction func point(_ sender: Any)
+    {
+        string += "."
+        updateOutput()
     }
     
     
@@ -156,10 +161,7 @@ class ViewController: UIViewController
     }
     
     
-    @IBAction func point(_ sender: Any)
-    {
-        
-    }
+
     
     
     
