@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,14 +17,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBw-eZ-Yvn" userLabel="Display" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
-                                <rect key="frame" x="20.666666666666657" y="77" width="372.66666666666674" height="110.66666666666669"/>
+                                <rect key="frame" x="38.5" y="106" width="691" height="153.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-Jf-tTR">
-                                        <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="110.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="691" height="153.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -44,21 +44,23 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcO-d6-owR" userLabel="CalculatorContainer" customClass="UIViewX" customModule="Calculator" customModuleProvider="target">
-                                <rect key="frame" x="6.3333333333333428" y="196" width="401.33333333333326" height="515.33333333333337"/>
+                                <rect key="frame" x="11.5" y="268" width="745" height="717"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-1M-PDg">
-                                        <rect key="frame" x="54.666666666666657" y="72.000000000000028" width="292" height="370.66666666666674"/>
+                                        <rect key="frame" x="56.5" y="-41.5" width="632" height="799"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="q6J-5f-bCH">
-                                                <rect key="frame" x="0.0" y="0.0" width="292" height="69.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="632" height="155"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okg-zX-nIJ" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="LZ8-h5-Pa2">
+                                                            <constraint firstAttribute="width" constant="85" id="LZ8-h5-Pa2">
                                                                 <variation key="heightClass=compact-widthClass=compact" constant="50"/>
                                                                 <variation key="heightClass=compact-widthClass=regular" constant="65"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="155"/>
                                                             </constraint>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -75,7 +77,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-iP-H47" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="74" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="159" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="rsX-iP-H47" secondAttribute="height" id="edC-7h-ezW"/>
@@ -97,7 +99,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-RJ-fLA" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="148" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="318" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Mj6-RJ-fLA" secondAttribute="height" id="5fI-OU-uam"/>
@@ -116,7 +118,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aND-dY-5M3" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="222" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="477" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="aND-dY-5M3" secondAttribute="height" id="f1j-CL-LSq"/>
@@ -144,10 +146,10 @@
                                                 <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1a3-qz-qRO">
-                                                <rect key="frame" x="1.3333333333333428" y="75.333333333333314" width="289.33333333333326" height="69.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="161" width="632" height="155"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDg-WI-8II" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="69.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="eDg-WI-8II" secondAttribute="height" id="E4w-dp-8X4"/>
@@ -166,7 +168,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eW-ml-uFl" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="73.333333333333314" y="0.0" width="69.333333333333314" height="69.333333333333329"/>
+                                                        <rect key="frame" x="159" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="2eW-ml-uFl" secondAttribute="height" id="rHE-mf-xPu"/>
@@ -185,7 +187,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJK-7e-lZg" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="146.66666666666666" y="0.0" width="69.333333333333343" height="69.333333333333329"/>
+                                                        <rect key="frame" x="318" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="CJK-7e-lZg" secondAttribute="height" id="Gir-eo-PHk"/>
@@ -204,7 +206,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-Rd-vAh" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="219.99999999999997" y="0.0" width="69.333333333333343" height="69.333333333333329"/>
+                                                        <rect key="frame" x="477" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="gjS-Rd-vAh" secondAttribute="height" id="V6V-n4-4mt"/>
@@ -232,10 +234,10 @@
                                                 <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wkf-pG-fGd">
-                                                <rect key="frame" x="0.0" y="150.66666666666669" width="292" height="69.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="322" width="632" height="155"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5M-Nn-ASX" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="g5M-Nn-ASX" secondAttribute="height" id="0Ya-pD-7Yp"/>
@@ -254,7 +256,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY1-iO-Lu5" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="74" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="159" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="fY1-iO-Lu5" secondAttribute="height" id="vA4-O4-XZW"/>
@@ -273,7 +275,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGi-c4-vtZ" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="148" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="318" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="zGi-c4-vtZ" secondAttribute="height" id="gYg-Kl-TCO"/>
@@ -292,7 +294,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6o-aq-m8i" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="222" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="477" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="K6o-aq-m8i" secondAttribute="height" multiplier="1:1" id="7Hj-jQ-Pk7"/>
@@ -320,10 +322,10 @@
                                                 <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GKl-gx-U8G">
-                                                <rect key="frame" x="0.0" y="226.00000000000003" width="292" height="69.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="483" width="632" height="155"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gva-Mb-gS3" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Gva-Mb-gS3" secondAttribute="height" id="dDM-xf-jH3"/>
@@ -342,7 +344,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mly-5e-R9i" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="74" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="159" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="mly-5e-R9i" secondAttribute="height" id="xxt-CI-vqM"/>
@@ -361,7 +363,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05g-BY-Bdo" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="148" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="318" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="05g-BY-Bdo" secondAttribute="height" id="eM7-ob-aZx"/>
@@ -380,7 +382,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gc-pN-elZ" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="222" y="0.0" width="70" height="69.333333333333329"/>
+                                                        <rect key="frame" x="477" y="0.0" width="155" height="155"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="7Gc-pN-elZ" secondAttribute="height" multiplier="1:1" id="ZIc-lw-Mhe"/>
@@ -408,10 +410,10 @@
                                                 <variation key="heightClass=compact" axis="vertical"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-Gd-UIB">
-                                                <rect key="frame" x="0.0" y="301.33333333333337" width="292" height="69.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="644" width="632" height="155"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjl-yV-F9q" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.33333333333325754" width="143.66666666666666" height="69"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="313.5" height="155"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.79452054794520544" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                         <state key="normal" title="0">
@@ -427,7 +429,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMq-m4-PJB" customClass="UIButtonX" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="148.66666666666663" y="0.0" width="143.33333333333337" height="69.333333333333329"/>
+                                                        <rect key="frame" x="318.5" y="0.0" width="313.5" height="155"/>
                                                         <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="=">
@@ -473,10 +475,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1t-FO-Bnr" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="25"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="hG2-wn-eXB"/>
+                                    <constraint firstAttribute="height" constant="25" id="hG2-wn-eXB"/>
                                 </constraints>
                             </view>
                         </subviews>
